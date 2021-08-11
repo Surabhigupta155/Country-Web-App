@@ -15,63 +15,45 @@ function CountryDetails({ countryData }) {
         }
     }
 
-    function NeighbourCountries() {
-        for(var i=0; i<countryData.borders.length; i++) {
-            return(
-                <Col lg={4}>
-                    <img style={{width: "100%", height: "auto"}} src={`https://restcountries.eu/data/${countryData.borders[i].toLowerCase()}.svg`}></img>
-                </Col>
-            )
-        }
-    }
-
     return (
         <>
             <Link href="/">
-                <Button style={{height:"auto", borderRadius:"0", fontSize: "calc(60% + 0.5vw + 0.5vh)", border: "2px solid", marginTop: "5%", marginLeft: "5%"}} variant="outline-success">Back to Home</Button>
+                <Button className="buttontohome" variant="outline-success">Back to Home</Button>
             </Link>
            
-            <Container style={{paddingLeft: "5%", paddingRight: "5%"}}>
-                <h1 style={{fontSize: "calc(100% + 1.5vw + 1.5vh)", fontWeight: "bold", paddingBottom: "2%", paddingTop: "3%"}}>{countryData.name}</h1>
-                <Row style={{justifyContent: "center", alignItems: "center"}}>
-                    <Col lg={6} md={6} style={{paddingRight: "5%", paddingBottom: "4%"}}>
+            <Container className="detailcontainer">
+                <h1>{countryData.name}</h1>
+                <Row className="detailrow">
+                    <Col className="colimg" lg={6} md={6}>
                         <img src={countryData.flag} width={"100%"} height={"auto"}/>
                     </Col>
                     <Col lg={6} md={6}>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Native Name: {countryData.nativeName}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Capital: {countryData.capital}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Population: {countryData.population}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Region: {countryData.region}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Sub-region: {countryData.subregion}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Area: {countryData.area}.0 Km<sup>2</sup></h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Country Code: +{countryData.callingCodes[0]}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Languages: {Languages()}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Currencies: {countryData.currencies[0].name}</h5>
-                        <h5 style={{fontSize: "calc(60% + 0.5vw + 0.5vh)", paddingBottom: "1%"}}>Timezones: {countryData.timezones[0]}</h5>
+                        <h5 className="h5detail">Native Name: {countryData.nativeName}</h5>
+                        <h5 className="h5detail">Capital: {countryData.capital}</h5>
+                        <h5 className="h5detail">Population: {countryData.population}</h5>
+                        <h5 className="h5detail">Region: {countryData.region}</h5>
+                        <h5 className="h5detail">Sub-region: {countryData.subregion}</h5>
+                        <h5 className="h5detail">Area: {countryData.area}.0 Km<sup>2</sup></h5>
+                        <h5 className="h5detail">Country Code: +{countryData.callingCodes[0]}</h5>
+                        <h5 className="h5detail">Languages: {Languages()}</h5>
+                        <h5 className="h5detail">Currencies: {countryData.currencies[0].name}</h5>
+                        <h5 className="h5detail">Timezones: {countryData.timezones[0]}</h5>
                     </Col>
                 </Row>
             </Container>
 
-            <Container style={{paddingLeft: "6%", paddingRight: "1%", paddingTop: "1%", marginBottom: "5%", marginTop: "5%", border: "2px solid lightgray"}}>
-                <h2 style={{fontWeight: "bold", paddingBottom: "5%", fontSize: "calc(80% + 1vw + 1vh)"}}>Neighbour Countries</h2>
-                <Row style={{justifyContent: "center", alignItems: "center"}}>
+            <Container className="neighbourcontainer">
+                <h2 className="detailh2">Neighbour Countries</h2>
+                <Row className="detailrow">
                     {
                         countryData.borders.map((countryFlag)=>{
-                            return (
-                                <Col lg={4} md={4} sm={6} style={{paddingBottom: "5%"}}>
-                                    <img style={{width: "80%", height: "auto"}} src={`https://restcountries.eu/data/${countryFlag.toLowerCase()}.svg`}></img>
-                                </Col>
-                            )
+                                return (
+                                    <Col lg={4} md={4} sm={6} className="colneighours">
+                                        <img className="neighbourflag" src={`https://restcountries.eu/data/${countryFlag.toLowerCase()}.svg`}></img>
+                                    </Col>
+                                )
                         })
                     }
-                    {/* {
-                        for(var i=0; i<countryData.borders.length; i++) {
-                                <Col lg={4}>
-                                    <img style={{width: "100%", height: "auto"}} src={`https://restcountries.eu/data/${countryData.borders[i].toLowerCase()}.svg`}></img>
-                                </Col>
-                        }
-                    } */}
-                    {/* {NeighbourCountries()} */}
                 </Row>
             </Container>
         </>

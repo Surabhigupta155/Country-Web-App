@@ -14,3 +14,112 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.homecontainer {
+  padding-left: 12%;
+  padding-right: 12%; 
+  padding-bottom: 3%;
+}
+
+h1 {
+  font-size: calc(100% + 1.5vw + 1.5vh);
+  font-weight: bold; 
+  padding-bottom: 2%; 
+  padding-top: 3%;
+}
+
+.input {
+  width: 100%; 
+  padding: 2%; 
+  border: 2px solid lightgray; 
+  font-size: calc(70% + 0.6vw + 0.6vh);
+}
+
+.countries {
+  padding-left: 12%; 
+  padding-right: 12%;
+  padding-bottom: 3%;
+}
+
+.detailcontainer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.card {
+  border: 2px solid lightgray;
+}
+
+.countriesrow {
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+}
+
+.homeh2 {
+  font-weight: bold;
+  padding-bottom: 2%;
+  font-size: calc(100% + 1.1vw + 1.1vh);
+}
+
+.homeh5 {
+  padding-bottom: 2%;
+  font-size: calc(60% + 0.4vw + 0.4vh);
+}
+
+.buttoncountries {
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+  font-size: calc(60% + 0.5vw + 0.5vh);
+  border: 2px solid;
+  margin-bottom: 2%;
+}
+
+.neighbourflag {
+  width: 80%;
+  height: auto;
+}
+
+.buttontohome {
+  height: auto;
+  border-radius: 0;
+  font-size: calc(60% + 0.5vw + 0.5vh);
+  border: 2px solid;
+  margin-top: 5%;
+  margin-left: 5%;
+}
+
+.detailrow {
+  justify-content: center;
+  align-items: center;
+}
+
+.colimg {
+  padding-right: 5%;
+  padding-bottom: 4%;
+}
+
+.h5detail {
+  font-size: calc(60% + 0.5vw + 0.5vh);
+  padding-bottom: 1%;
+}
+
+.neighbourcontainer {
+  padding-left: 6%;
+  padding-right: 1%;
+  padding-top: 1%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  border: 2px solid lightgray;
+}
+
+.detailh2 {
+  font-weight: bold;
+  padding-bottom: 5%;
+  font-size: calc(80% + 1vw + 1vh);
+}
+
+.colneighours {
+  padding-bottom: 5%;
+}
